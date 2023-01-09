@@ -1,0 +1,17 @@
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+ 
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" [routerLink]="['home']" [routerLinkActive]="'selected'">
+        Home
+      </a>
+
+      <a class="navbar-item" [routerLink]="['pokemon']" [routerLinkActive]="'selected'">
+        Pokemon
+      </a>
+      </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

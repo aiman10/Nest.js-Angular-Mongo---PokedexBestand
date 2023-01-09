@@ -1,0 +1,36 @@
+<section class="section">
+  <div *ngIf="pokemon">
+    <div class="card" style="width: 400px">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img [src]="pokemon.sprites.animated" alt="Placeholder image" />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">
+              <input class="input" type="text" [(ngModel)]="pokemon.name" />
+              <span *ngIf="pokemon.favourite" class="tag is-primary"
+                >Favourite</span
+              >
+            </p>
+            <p class="subtitle is-6">#{{ pokemon.id }}</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <p>
+            <strong>Height:</strong>
+            <input class="input" type="number" [(ngModel)]="pokemon.height" />
+          </p>
+          <p>
+            <strong>Weight:</strong>
+            <input class="input" type="number" [(ngModel)]="pokemon.weight" />
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="button" (click)="update()">Edit Pokemon</button>
+  </div>
+</section>

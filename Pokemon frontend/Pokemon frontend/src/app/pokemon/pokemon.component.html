@@ -1,0 +1,15 @@
+<section class="section">
+  <div *ngFor="let pokemon of pokemon">
+    <div class="box is-flex">
+      <a routerLink="{{ pokemon.id }}">{{ pokemon.name }}</a>
+      <div class="is-flex-grow-1"></div>
+      <button class="button is-primary" (click)="toggleFavorite(pokemon)">
+        <i class="fas fa-star has-text-warning" *ngIf="pokemon.favourite"></i>
+        <i class="fas fa-star" *ngIf="!pokemon.favourite"></i>
+      </button>
+      <button class="button is-danger ml-2" (click)="deletePokemon(pokemon)">
+        <i class="fas fa-trash"></i>
+      </button>
+    </div>
+  </div>
+</section>

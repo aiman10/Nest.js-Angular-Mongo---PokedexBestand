@@ -1,0 +1,9 @@
+.pokeheader {
+    display: grid;
+    grid-template-columns: 50px 1fr
+}
+
+.pokeid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
